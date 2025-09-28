@@ -5,6 +5,7 @@ saludar=function(){
     let estatura=transformarFloat("txtEstatura");
     mostrarTexto("resultado","hola, "+" "+nombre+" "+apellido);
     mostrarImagen("img","./Imagenes/baldi-playtime.gif");
+    mostrarTextoEnCaja("txtNombre","");
 }
 recuperarTexto=function(idComponente){
     let guardar
@@ -29,4 +30,8 @@ mostrarTexto=function(idComponente,texto){
 mostrarImagen=function(idComponente,Img){
     let recuperar=document.getElementById(idComponente);
     recuperar.src=Img;
+}
+mostrarTextoEnCaja=function(idComponente,texto){
+    let guardar=document.getElementById(idComponente);
+    guardar.value=texto;
 }
