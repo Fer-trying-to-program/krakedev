@@ -56,8 +56,8 @@ calcularValorTotal = function () {
 
             Si el caso de prueba es exitoso, hacer un commit
         */
-    //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
-    //11. Mostrar el resultado en el componente lblTotal
+   valorTotal=calcularTotal(valorSubtotal,valorDescuento,valorIVA); //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
+    mostrarTexto("lblTotal",valorTotal);//11. Mostrar el resultado en el componente lblTotal
     /*
         Caso de prueba: 
             - cantidad: 10

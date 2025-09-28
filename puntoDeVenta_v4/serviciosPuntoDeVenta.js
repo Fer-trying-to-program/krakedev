@@ -13,9 +13,6 @@ calcularSubtotal=function(precio,cantidad){
     return mult;
 }
 calcularTotal=function(subtotal,descuento,iva){
-    let int=parseInt(subtotal);
-    let int2=parseInt(descuento);
-    let int3=parseInt(iva);
-    let suma=int-int2+int3;
+    let suma=subtotal-descuento+iva;
     return suma;
 }
