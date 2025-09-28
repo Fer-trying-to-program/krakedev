@@ -3,6 +3,7 @@ saludar=function(){
     let apellido=recuperarTexto("txtApellido");
     let edad=transformarInt("txtEdad");
     let estatura=transformarFloat("txtEstatura");
+    mostrarTexto("resultado","hola, "+" "+nombre+" "+apellido)
 }
 recuperarTexto=function(idComponente){
     let guardar
@@ -19,4 +20,8 @@ transformarFloat=function(idComponente){
     let guardar=recuperarTexto(idComponente);
     let float=parseFloat(guardar);
     return float;
+}
+mostrarTexto=function(idComponente,texto){
+    let recuperar=document.getElementById(idComponente);
+    recuperar.innerText=texto;
 }
