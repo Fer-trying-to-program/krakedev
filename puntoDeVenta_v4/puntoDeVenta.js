@@ -82,7 +82,15 @@ calcularValorTotal = function () {
 
 }
 limpiar = function () {
-    /*
+    mostrarTextoEnCaja("txtProducto"," ");
+    mostrarTextoEnCaja("txtCantidad"," ");
+    mostrarTextoEnCaja("txtPrecio"," ");
+    mostrarTextoEnCaja("txtPorcentajeDescuento"," ");
+    mostrarTexto("lblSubtotal"," ");
+    mostrarTexto("lblDescuento"," ");
+    mostrarTexto("lblValorIVA"," ");
+    mostrarTexto("lblTotal"," ");
+    mostrarTexto("lblResumen"," ")/*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
         Dejar todos los textos de los montos con el valor 0.0
         Si funciona, hacer un commit
