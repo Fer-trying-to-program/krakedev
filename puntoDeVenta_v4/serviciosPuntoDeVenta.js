@@ -1,8 +1,7 @@
 calcularValorDescuento=function(monto,porcentajeDescuento){
-    let int=parseInt(monto);
-    let int2=parseInt(porcentajeDescuento);
-    let suma=monto*porcentajeDescuento/100;
-    return suma;
+    let suma=monto*porcentajeDescuento;
+    let division=suma/100;
+    return division;
 }
 calcularIva=function(monto){
     let int=parseInt(monto);
