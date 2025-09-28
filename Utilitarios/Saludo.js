@@ -3,7 +3,8 @@ saludar=function(){
     let apellido=recuperarTexto("txtApellido");
     let edad=transformarInt("txtEdad");
     let estatura=transformarFloat("txtEstatura");
-    mostrarTexto("resultado","hola, "+" "+nombre+" "+apellido)
+    mostrarTexto("resultado","hola, "+" "+nombre+" "+apellido);
+    mostrarImagen("img","./Imagenes/baldi-playtime.gif");
 }
 recuperarTexto=function(idComponente){
     let guardar
@@ -24,4 +25,8 @@ transformarFloat=function(idComponente){
 mostrarTexto=function(idComponente,texto){
     let recuperar=document.getElementById(idComponente);
     recuperar.innerText=texto;
+}
+mostrarImagen=function(idComponente,Img){
+    let recuperar=document.getElementById(idComponente);
+    recuperar.src=Img;
 }
