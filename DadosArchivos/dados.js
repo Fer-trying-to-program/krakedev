@@ -1,3 +1,5 @@
+let Lanzamientos=5;
+let Puntaje=0;
 jugar=function(){
    let guardar=lanzarDado();  
    cambiarTexto("lblNumero",guardar);

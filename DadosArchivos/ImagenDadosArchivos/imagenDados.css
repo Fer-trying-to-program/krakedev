@@ -11,19 +11,18 @@ html, body {
   }
 
 body{
-    background-image: url("fondoDado.jpg");
+    background-image: url("dragonBall.jpg");
     background-size: cover;
     background-color: aliceblue;
-   
-  
 }
 .imagen{
-    background-color: rgba(255, 251, 0, 0.626);
     display: flex;
     flex:5;
- 
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 251, 0, 0.445);
+    margin-top:100px;
+    margin-bottom: 100px;
 }
 .botones{
     display: flex;
@@ -79,10 +78,16 @@ body{
 h1{
     font-size: 50px;
 }
-.txtIf{
-    display:flex;
-    justify-content: center;
+.info{
+    font-size: 40px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.Letras{
-    color:violet;
+.letras{
+    color:black;
+}
+.txtGanaste{
+    font-size: 30px;
+    color: rgb(0, 255, 81);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
