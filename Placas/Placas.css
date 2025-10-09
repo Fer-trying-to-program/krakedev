@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(211, 211, 200);
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+}
+.separacion{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 91px;
+}
+.boton{
+    margin-left: 30px;  
+}
+
+.error{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(239, 78, 78)
+    
+}
+.validacion{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+}
