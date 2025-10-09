@@ -24,7 +24,7 @@ validarEstructura=function(placa){
     }else if(char1<"A" || char1>"Z"){
         mostrarTexto("txtError","El primer caracter debe ser una letra mayuscula");
     }else if(char2<"A" || char2>"Z"){
-        mostrarTexto("txtError","El segundo caracter debe ser una letra m   ayuscula");
+        mostrarTexto("txtError","El segundo caracter debe ser una letra mayuscula");
 
     }else if(char3<"A" || char3>"Z"){
         mostrarTexto("txtError","El tercer caracter deber ser una letra mayuscula");
@@ -51,4 +51,58 @@ validarEstructura=function(placa){
                 return null,false;
             }
         }
+}
+obtenerProvincia=function(placa){
+let char
+char=placa.charAt(0);
+if(char=="A"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Azuay");
+}else if(char=="B"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Bolizar");
+}else if(char=="U"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Cañar");
+}else if(char=="C"){
+    mostrarTexto("txtPlacas", "su placa es de la provincia de Carchi");
+}else if(char=="X"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Cotopaxi");
+}else if(char=="H"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de chimborazo");
+}else if(char=="O"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de El Oro");
+}else if(char=="E"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Esmeraldas");
+}else if(char=="W"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Galapagos");
+}else if(char=="G"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia del Guayas");
+}else if(char=="I"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Imbabura");
+}else if(char=="L"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Loja");
+}else if(char=="R"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Los Rios");
+}else if(char=="M"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Manabi");
+}else if(char=="V"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Morona Santiago");
+}else if(char=="N"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Napo");
+}else if(char=="S"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Pastaza");
+}else if(char=="P"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Pichincha");
+}else if(char=="K"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Sucumbios");
+}else if(char=="Q"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Orellana");
+}else if(char=="T"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Tungurahua");
+}else if(char=="Z"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Zamora Chinchipe");
+}else if(char=="Y"){
+    mostrarTexto("txtPlacas","Su placa es de la provincia de Santa Elena");
+}else{
+    mostrarTexto("txtplacas","");
+    return null,false;
+}
 }

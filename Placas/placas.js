@@ -4,7 +4,9 @@ validarPlaca=function(){
     validacion=validarEstructura(valorIngresado);
     if(validarEstructura(valorIngresado) ==false){
         mostrarTexto("txtValidacion", "la placa es valida");
+        let guardar=obtenerProvincia(valorIngresado);
     }else{
         mostrarTexto("txtValidacion","la placa no es valida");
+        mostrarTexto("txtPlacas","Vehiculo incorrecto");
     }
 }  

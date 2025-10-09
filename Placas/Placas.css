@@ -30,6 +30,14 @@ body{
     color: rgb(239, 78, 78)
     
 }
+.placa{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .validacion{
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
