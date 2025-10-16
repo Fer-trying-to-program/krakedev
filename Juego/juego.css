@@ -1,0 +1,60 @@
+body{
+    background-color: rgba(169, 169, 169, 0.855);
+}
+.titulo{
+    font-size: 26px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.imagenes{
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.resultado{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 29px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0)
+}
+.txtMaquina{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+.imgMaquina{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.Usuario{
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.Maquina{
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 3px;
+}

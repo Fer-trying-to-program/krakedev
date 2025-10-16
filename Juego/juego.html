@@ -8,18 +8,21 @@
         <script src="serviciosJuego.js"></script>
         <link href="juego.css" rel="stylesheet"/>
     <body>
-        <div class="titulo"> Piedra, papel o tijera</div>
-        <div class="imagenes">
-            <img src="./imagenes/papel.png" width="200px" onclick="jugar('papel')"/>
-            <img src="./imagenes/piedra.png" width="200px" onclick="jugar('piedra')"/>
-            <img src="./imagenes/tijera.png" width="200px" onclick="jugar('tijera')"/>
-            <div class="resultado" id="txtResultado"></div>
-            <div class="imgMaquina">
-            <img src="" width="200px" id="imgMaquina"/>
-            </div>
             <div class="Usuario" id="txtPuntosUsuario">Puntos: 0</div>
             <div class="Maquina" id="txtPuntosMaquina">En Contra: 0</div>
+            <div class="boton">
             <input type="button" id="botonOculto" value="Nueva Partida" style="display: none;"onclick="limpiar();"/>
-        </div>
+            </div>
+        <div class="titulo" id="titulo"> Piedra papel o tijera</div>
+        <div class="imagenes">
+            <img src="./imagenes/papel.png" id="imgPapel" width="200px" onclick="jugar('papel')"/>
+            <img src="./imagenes/piedra.png"  id="imgPiedra"width="200px" onclick="jugar('piedra')"/>
+            <img src="./imagenes/tijera.png"  id="imgTijera"width="200px" onclick="jugar('tijera')"/>
+            </div>
+             <div class="txtMaquina" id="txtMaquina">Tu rival:</div>
+            <div class="imgMaquina">
+            <img src="" width="160px" id="imgMaquina"/>
+            </div>
+            <div class="resultado" id="txtResultado"></div>
     </body>
 </html>
