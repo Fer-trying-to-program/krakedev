@@ -19,6 +19,7 @@ recorrerArreglo=function(){
 }
 agregarNota=function(nota){
     notas.push(nota);
+    mostrarNotas();
 }
 ejecutarPromedio=function(){
     let txt=calcularPromedioNotas()
@@ -35,4 +36,23 @@ calcularPromedioNotas=function(){
     }
     retornar=promedio/notas.length;
     return retornar;
+}
+generarTabla=function(){
+    let contenidoTabla="";
+    let generarTabla=document.getElementById("divTabla");
+    contenidoTabla+="<table><tr><td>Esta<td/><td>mela<td/><tr/><tr><td>Comes<td/><tr/><table/>";
+    generarTabla.innerHTML=contenidoTabla;
+}
+mostrarNotas=function(){
+    let cmpTabla=document.getElementById("divTabla");
+    let generarTabla="<table><tr><th>Notas</th></tr>";
+    let miNota
+    for(let i=0;i<notas.length;i++){
+        miNota=notas[i];
+        generarTabla+="<tr><td>"
+        generarTabla+=miNota
+        generarTabla+="</tr></td>"
+    }
+    generarTabla+="</table"
+    cmpTabla.innerHTML=generarTabla;
 }
