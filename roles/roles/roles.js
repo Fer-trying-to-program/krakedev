@@ -175,3 +175,14 @@ limpiar=function(){
     ocultarDespuesDeGuardar();
     esNuevo=true;
 }
+buscarPorRol=function(){
+    let rol=recuperarTexto("txtBusquedaCedulaRol");
+    let buscar=buscarEmpleado(rol);
+    if(buscar==null){
+        alert("No existe el empleado con esa cedula");
+    }else{
+        mostrarTexto("infoCedula",buscar.cedula);
+        mostrarTexto("infoNombre",buscar.nombre + " " + buscar.apellido);
+        mostrarTexto("infoSueldo",buscar.sueldo);
+    }
+}
