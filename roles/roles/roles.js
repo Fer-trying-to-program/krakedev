@@ -1,4 +1,4 @@
-esNuevo=false;
+esNuevo=true;
 let empleados = [
     {cedula:"1714616123",nombre:"John",apellido:"Cena",sueldo:500.0},
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
@@ -49,7 +49,6 @@ ejecutarNuevo=function(){
     mostrarComponente("txtApellido");
     mostrarComponente("txtSueldo");
     mostrarComponente("btnGuardar");
-    esNuevo=true;
 }
 buscarEmpleado=function(cedula){
     let empleado;
@@ -76,6 +75,7 @@ return bulian;
 }
 guardar=function(){
     let validarEmpleado;
+    let empleado;
     let char;
     let char2;
     let bulian=false;
@@ -123,21 +123,51 @@ guardar=function(){
             empleado.apellido=txtApellido,
             empleado.sueldo=txtSueldo
             validarEmpleado=agregarEmpleado(empleado);
+    }
+if(esNuevo==false && bulian==false){
+    let retorno=buscarEmpleado(txtCedula);
+    if(retorno!=null){
+        retorno.nombre=txtNombre;
+        retorno.apellido=txtApellido;
+        retorno.sueldo=txtSueldo;
+        validarEmpleado=true;
+        empleado=agregarEmpleado(retorno);
+        alert("Empleado modificado correctamente");
+    }
+    ocultarComponente("txtCedula");
+    ocultarComponente("txtNombre");
+    ocultarComponente("txtApellido");
+    ocultarComponente("txtSueldo");
+    ocultarComponente("btnGuardar");
 }
     if(validarEmpleado==true){
         alert("Empleado guardado correctamente");
         mostrarEmpleados();
         ocultarDespuesDeGuardar();
+        esNuevo=false;
     }else if(validarEmpleado==undefined){
         alert("Error");
     }else{
         alert("Ya existe un empleado con esa cedula" + txtCedula);
 }
     }
+
 ocultarDespuesDeGuardar=function(){
     ocultarComponente("txtCedula");
     ocultarComponente("txtNombre");
     ocultarComponente("txtApellido");
     ocultarComponente("txtSueldo");
     ocultarComponente("btnGuardar");
+}
+ejecutarBusqueda=function(){
+    let txtCedula=recuperarTexto("txtCedula");
+    let empleadoEncontrado=buscarEmpleado(txtCedula);
+    if(empleadoEncontrado==null){
+        alert("No existe el empleado con esa cedula");
+    }else{
+        ocultarComponente("txtCedula");
+        mostrarTexto("txtNombre",empleadoEncontrado.nombre);
+        mostrarTexto("txtApellido",empleadoEncontrado.apellido);
+        mostrarTexto("txtSueldo",empleadoEncontrado.sueldo);
+    }
 }
