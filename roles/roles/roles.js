@@ -186,3 +186,44 @@ buscarPorRol=function(){
         mostrarTexto("infoSueldo",buscar.sueldo);
     }
 }
+calcularAporteEmpleado=function(sueldo){
+    let aporte=sueldo*0.0945;
+    return aporte;
+}
+calcularValorAPagar=function(sueldo,iess,descuento){
+
+    let valorPagar=sueldo-(iess+descuento);
+    return valorPagar;
+}
+recuperartextoDiv=function(idComponente){
+    let componente;
+    let retorno;
+    componente=document.getElementById(idComponente);
+    retorno=componente.textContent;
+    return retorno;
+}
+recuperarFloatDiv=function(idComponente){
+    let valorCaja= recuperartextoDiv(idComponente);
+    let valorFlotante = parseFloat(valorCaja);
+    return valorFlotante;
+}
+recuperarIntDiv=function(idComponente){
+    let valorCaja= recuperartextoDiv(idComponente);
+    let valorEntero = parseInt(valorCaja);
+    return valorEntero;
+}
+calcularRol=function(){
+    let total;
+    let aporte
+    let guardar=recuperarFloatDiv("infoIESS")
+    let guardar1=recuperarIntDiv("infoSueldo");
+    let guardar2=document.getElementById("txtDescuento");
+    let valorDescuento=guardar2.value;
+    let float=parseFloat(valorDescuento);
+if(isNaN(float) == false & float >=0  & float <= guardar1){
+aporte=calcularAporteEmpleado(guardar1);
+total=calcularValorAPagar(guardar1,guardar,float);
+}
+mostrarTexto("infoIESS",aporte);
+mostrarTexto("infoPago",total);
+}
