@@ -1,4 +1,7 @@
 esNuevo=true;
+let roles=[ {cedula:"1714616123",nombre:"John",apellido:"Cena",sueldo:500.0},
+    {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
+    {cedula:"1234567890",nombre:'Fercho',apellido:'Rojas',sueldo:550.0},];
 let empleados = [
     {cedula:"1714616123",nombre:"John",apellido:"Cena",sueldo:500.0},
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
@@ -16,6 +19,7 @@ mostrarOpcionRol=function(){
     mostrarComponente("divRol");
     ocultarComponente("divEmpleado");
     ocultarComponente("divResumen");
+    ocultarComponente("boton");
 }
 mostrarOpcionResumen=function(){
     mostrarComponente("divResumen");
@@ -223,7 +227,53 @@ calcularRol=function(){
 if(isNaN(float) == false & float >=0  & float <= guardar1){
 aporte=calcularAporteEmpleado(guardar1);
 total=calcularValorAPagar(guardar1,guardar,float);
+mostrarComponente("boton");
 }
 mostrarTexto("infoIESS",aporte);
 mostrarTexto("infoPago",total);
+}
+buscarRol=function(cedula){
+let empleado;
+    let almacenar=null;
+    for(let i=0;i<empleados.length;i++){
+        empleado=empleados[i];
+        if(empleado.cedula==cedula){
+            almacenar=empleado;
+            break;
+        }
+    }
+    return almacenar;
+}
+agregarRol=function(rol){
+     let bulian=false;
+let guardar=buscarEmpleado(rol.cedula);
+if(guardar==null){
+    roles.push(rol);
+    bulian=true;
+    alert("Rol agregado correctamente");
+}else{
+    bulian=false;
+    alert("Ya existe un rol para ese empleado"+ rol.cedula);
+}
+}
+calcularAporteEmpleado=function(sueldo){
+    let aporte=sueldo*0.1125;
+    return aporte;
+}
+guardarRol=function(){
+    let guarda1=recuperartextoDiv("infoCedula");
+    let guardar2=recuperartextoDiv("infoNombre");
+    let guardar3=recuperarFloatDiv("infoSueldo");
+    let guardar4=recuperarFloatDiv("infoIESS");
+    let guardar5=recuperarFloatDiv("infoPago");
+    let sueldo=calcularAporteEmpleado(guardar3);
+    let nuevoRol={}
+    nuevoRol.sueldo=guardar3;
+    nuevoRol.cedula=guarda1;
+    nuevoRol.nombre=guardar2;
+    nuevoRol.iess=guardar4;
+    nuevoRol.totalPagar=sueldo;
+    agregarRol(nuevoRol);
+    console.log("El rol ha sido guardado correctamente");
+
 }
