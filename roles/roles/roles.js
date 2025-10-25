@@ -171,3 +171,7 @@ ejecutarBusqueda=function(){
         mostrarTexto("txtSueldo",empleadoEncontrado.sueldo);
     }
 }
+limpiar=function(){
+    ocultarDespuesDeGuardar();
+    esNuevo=true;
+}
